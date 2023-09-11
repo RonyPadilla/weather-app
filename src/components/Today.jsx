@@ -1,13 +1,19 @@
 import "../styles/today.css";
+import PropTypes from 'prop-types';
 import { FaLocationDot } from "react-icons/fa6";
 import { BiCurrentLocation } from "react-icons/bi";
 
-export const Today = () => {
+export const Today = ({ sendSearch }) => {
+
+  const handleClick = () => {
+    sendSearch(true); 
+  };
+
   return (
     <>
       <section className="today">
         <div className="div-today-search">
-          <button className="button-search-places">Seach for places</button>
+          <button className="button-search-places" onClick={handleClick}>Seach for places</button>
           <button className="button-location"><BiCurrentLocation className="icon-locatio"/></button>
         </div>
 
@@ -27,4 +33,8 @@ export const Today = () => {
       </section>
     </>
   );
+};
+
+Today.propTypes = {
+  sendSearch: PropTypes.func.isRequired, 
 };

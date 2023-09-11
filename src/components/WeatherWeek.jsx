@@ -76,32 +76,32 @@ export const WeatherWeek = () => {
             <h2>Today’s Hightlights </h2>
             <div className="div-tag-day-weather-info">
               <div className="div-tag-day-weather1">
-                <p className="p-Wind-status">Wind status</p>
-                <h2 className="h2-Wind-status">
-                  <strong className="strong-Wind-status">7</strong>mph
+                <p className="p-wind-status">wind status</p>
+                <h2 className="h2-wind-status">
+                  <strong className="strong-wind-status">7</strong>mph
                 </h2>
-                <div className="div-Wind-status">
-                  <div className="div-icon-Wind-status">
-                    <RiNavigationFill className="icon-Wind-status"/>
+                <div className="div-wind-status">
+                  <div className="div-icon-wind-status">
+                    <RiNavigationFill className="icon-wind-status"/>
                   </div>
-                  <p>WSW</p>
+                  <p className="p-wsw-wind-status">WSW</p>
                 </div>
               </div>
               <div className="div-tag-day-weather1">
-                <p>Humidity</p>
-                <h2>
-                  <strong>84</strong>%
+                <p className="p-humidity">Humidity</p>
+                <h2 className="h2-humidity">
+                  <strong className="strong-humidity">84</strong>%
                 </h2>
-                <div>
-                  <div>
+                <div className="div-rod-humidity">
+                  <div className="div-percentage-humidity">
                     <p>0</p>
                     <p>50</p>
                     <p>100</p>
                   </div>
-                  <div>
-                    <div></div>
+                  <div className="div1-percentage-bar-humidity">
+                    <div className="div2-percentage-bar-humidity" style={{ '--w': '84%' }}></div>
                   </div>
-                  <p>%</p>
+                  <p className="p-percentage-humidity">%</p>
                 </div>
               </div>
               <div className="div-tag-day-weather2">
