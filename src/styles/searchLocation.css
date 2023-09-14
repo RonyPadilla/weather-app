@@ -23,6 +23,13 @@
 
 .div-search-location {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.div-seeker-search-location {
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 5%;
@@ -70,4 +77,28 @@
   font-size: 1vw;
   font-weight: 600;
   line-height: normal;
+}
+
+.div-searched-cities{
+  width: 22vw;
+  height: 70vh;
+  margin-top: 10%;
+}
+
+.searched-city{
+  width: 100%;
+  height: 10%;
+  border: 1px solid #616475;  
+  margin-bottom: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h3-searched-city{
+  margin-left: 5%;
+}
+
+.div-icon-searched-city{
+  margin-right: 5%;
 }
