@@ -75,10 +75,10 @@
 
 .img-weather {
   position: absolute;
-  width: 10vw;
-  height: 24vh;
-  top: 15vh;
-  left: 10vw;
+  width: 15vw;
+  height: 28vh;
+  top: 10vh;
+  left: 8vw;
   z-index: 2;
 }
 
@@ -127,4 +127,22 @@
 
 .icon-date-location-info{
     margin-right: 0.5vw;
+}
+
+.loading-today-data{
+  display: flex;
+  justify-content: center;
+  margin-left: 45%;
+  margin-top: 60%;
+  width: 50px;
+  height: 50px;
+  border: 10px solid #100e1dff;
+  border-radius: 50%;
+  border-top: 10px solid #ffffff;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
