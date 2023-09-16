@@ -133,17 +133,18 @@ export const WeatherWeek = ({ sendCountry }) => {
       <section className='weather-week'>
         {weatherData ? (
           <div className='div-content-weather-week'>
-            <div className='div-degrees'>
+            {window.innerWidth > 768?<div className='div-degrees'>
               <button className='dutton-degrees' onClick={handleDegrees}>
                 °C
               </button>
               <button className='dutton-degrees' onClick={handleDegrees}>
                 °F
               </button>
-            </div>
+            </div>:null}
+            
             <div className='div-weather-week-info'>
               <div className='div-day-weather-info'>
-                <p>Tomorrow</p>
+                <p className='p-div-day-weather-info'>Tomorrow</p>
                 <img
                   className='img-weather-info'
                   src={`https://github.com/RonyPadilla/weather-app/blob/main/src/img/${handleImg(
@@ -152,22 +153,20 @@ export const WeatherWeek = ({ sendCountry }) => {
                   alt='img-weather'
                 />
                 <div className='div-day-degrees-info'>
-                  <p>
+                  <p className='p-div-day-degrees-info'>
                     {degrees
                       ? weatherData.forecast.forecastday[1].day.maxtemp_c
-                      : weatherData.forecast.forecastday[1].day.maxtemp_f}
-                    °{degrees ? 'C' : 'F'}
+                      : weatherData.forecast.forecastday[1].day.maxtemp_f}<strong className='strong-div-day-degrees-info'>°{degrees ? 'C' : 'F'}</strong>
                   </p>
-                  <p>
+                  <p className='p-div-day-degrees-info'>
                     {degrees
                       ? weatherData.forecast.forecastday[1].day.mintemp_c
-                      : weatherData.forecast.forecastday[1].day.mintemp_f}
-                    °{degrees ? 'C' : 'F'}
+                      : weatherData.forecast.forecastday[1].day.mintemp_f}<strong className='strong-div-day-degrees-info'>°{degrees ? 'C' : 'F'}</strong>
                   </p>
                 </div>
               </div>
               <div className='div-day-weather-info'>
-                <p>{handleDate(weatherData.forecast.forecastday[2].date)}</p>
+                <p className='p-div-day-weather-info'>{handleDate(weatherData.forecast.forecastday[2].date)}</p>
                 <img
                   className='img-weather-info'
                   src={`https://github.com/RonyPadilla/weather-app/blob/main/src/img/${handleImg(
@@ -176,22 +175,20 @@ export const WeatherWeek = ({ sendCountry }) => {
                   alt='img-weather'
                 />
                 <div className='div-day-degrees-info'>
-                  <p>
+                  <p className='p-div-day-degrees-info'>
                     {degrees
                       ? weatherData.forecast.forecastday[2].day.maxtemp_c
-                      : weatherData.forecast.forecastday[2].day.maxtemp_f}
-                    °{degrees ? 'C' : 'F'}
+                      : weatherData.forecast.forecastday[2].day.maxtemp_f}<strong className='strong-div-day-degrees-info'>°{degrees ? 'C' : 'F'}</strong>
                   </p>
-                  <p>
+                  <p className='p-div-day-degrees-info'>
                     {degrees
                       ? weatherData.forecast.forecastday[2].day.mintemp_c
-                      : weatherData.forecast.forecastday[2].day.mintemp_f}
-                    °{degrees ? 'C' : 'F'}
+                      : weatherData.forecast.forecastday[2].day.mintemp_f}<strong className='strong-div-day-degrees-info'>°{degrees ? 'C' : 'F'}</strong>
                   </p>
                 </div>
               </div>
               <div className='div-day-weather-info'>
-                <p>{handleDate(weatherData.forecast.forecastday[3].date)}</p>
+                <p className='p-div-day-weather-info'>{handleDate(weatherData.forecast.forecastday[3].date)}</p>
                 <img
                   className='img-weather-info'
                   src={`https://github.com/RonyPadilla/weather-app/blob/main/src/img/${handleImg(
@@ -200,22 +197,20 @@ export const WeatherWeek = ({ sendCountry }) => {
                   alt='img-weather'
                 />
                 <div className='div-day-degrees-info'>
-                  <p>
+                  <p className='p-div-day-degrees-info'>
                     {degrees
                       ? weatherData.forecast.forecastday[3].day.maxtemp_c
-                      : weatherData.forecast.forecastday[3].day.maxtemp_f}
-                    °{degrees ? 'C' : 'F'}
+                      : weatherData.forecast.forecastday[3].day.maxtemp_f}<strong className='strong-div-day-degrees-info'>°{degrees ? 'C' : 'F'}</strong>
                   </p>
-                  <p>
+                  <p className='p-div-day-degrees-info'>
                     {degrees
                       ? weatherData.forecast.forecastday[3].day.mintemp_c
-                      : weatherData.forecast.forecastday[3].day.mintemp_f}
-                    °{degrees ? 'C' : 'F'}
+                      : weatherData.forecast.forecastday[3].day.mintemp_f}<strong className='strong-div-day-degrees-info'>°{degrees ? 'C' : 'F'}</strong>
                   </p>
                 </div>
               </div>
               <div className='div-day-weather-info'>
-                <p>{handleDate(weatherData.forecast.forecastday[4].date)}</p>
+                <p className='p-div-day-weather-info'>{handleDate(weatherData.forecast.forecastday[4].date)}</p>
                 <img
                   className='img-weather-info'
                   src={`https://github.com/RonyPadilla/weather-app/blob/main/src/img/${handleImg(
@@ -224,22 +219,20 @@ export const WeatherWeek = ({ sendCountry }) => {
                   alt='img-weather'
                 />
                 <div className='div-day-degrees-info'>
-                  <p>
+                  <p className='p-div-day-degrees-info'>
                     {degrees
                       ? weatherData.forecast.forecastday[4].day.maxtemp_c
-                      : weatherData.forecast.forecastday[4].day.maxtemp_f}
-                    °{degrees ? 'C' : 'F'}
+                      : weatherData.forecast.forecastday[4].day.maxtemp_f}<strong className='strong-div-day-degrees-info'>°{degrees ? 'C' : 'F'}</strong>
                   </p>
-                  <p>
+                  <p className='p-div-day-degrees-info'>
                     {degrees
                       ? weatherData.forecast.forecastday[4].day.mintemp_c
-                      : weatherData.forecast.forecastday[4].day.mintemp_f}
-                    °{degrees ? 'C' : 'F'}
+                      : weatherData.forecast.forecastday[4].day.mintemp_f}<strong className='strong-div-day-degrees-info'>°{degrees ? 'C' : 'F'}</strong>
                   </p>
                 </div>
               </div>
               <div className='div-day-weather-info'>
-                <p>{handleDate(weatherData.forecast.forecastday[5].date)}</p>
+                <p className='p-div-day-weather-info'>{handleDate(weatherData.forecast.forecastday[5].date)}</p>
                 <img
                   className='img-weather-info'
                   src={`https://github.com/RonyPadilla/weather-app/blob/main/src/img/${handleImg(
@@ -248,17 +241,15 @@ export const WeatherWeek = ({ sendCountry }) => {
                   alt='img-weather'
                 />
                 <div className='div-day-degrees-info'>
-                  <p>
+                  <p className='p-div-day-degrees-info'>
                     {degrees
                       ? weatherData.forecast.forecastday[5].day.maxtemp_c
-                      : weatherData.forecast.forecastday[5].day.maxtemp_f}
-                    °{degrees ? 'C' : 'F'}
+                      : weatherData.forecast.forecastday[5].day.maxtemp_f}<strong className='strong-div-day-degrees-info'>°{degrees ? 'C' : 'F'}</strong>
                   </p>
-                  <p>
+                  <p className='p-div-day-degrees-info'>
                     {degrees
                       ? weatherData.forecast.forecastday[5].day.mintemp_c
-                      : weatherData.forecast.forecastday[5].day.mintemp_f}
-                    °{degrees ? 'C' : 'F'}
+                      : weatherData.forecast.forecastday[5].day.mintemp_f}<strong className='strong-div-day-degrees-info'>°{degrees ? 'C' : 'F'}</strong>
                   </p>
                 </div>
               </div>
@@ -283,10 +274,8 @@ export const WeatherWeek = ({ sendCountry }) => {
                 </div>
                 <div className='div-tag-day-weather1'>
                   <p className='p-humidity'>Humidity</p>
-                  <h2 className='h2-humidity'>
-                    <strong className='strong-humidity'>
-                      {weatherData.current.humidity}
-                    </strong>
+                  <h2 className='h2-humidity'> 
+                  {weatherData.current.humidity}
                     %
                   </h2>
                   <div className='div-rod-humidity'>

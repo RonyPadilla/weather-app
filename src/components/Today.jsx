@@ -141,8 +141,8 @@ export const Today = ({ sendSearch, sendCountry }) => {
                 Search for places
               </button>
               <button className='button-location'>
-                <BiCurrentLocation
-                  style={{ color: 'white', width: '2vw', height: '4vh' }}
+                <BiCurrentLocation 
+                  style={{ color: 'white', width: '100%', height: '100%' }}
                 />
               </button>
             </div>
