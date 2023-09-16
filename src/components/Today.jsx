@@ -8,8 +8,6 @@ export const Today = ({ sendSearch, sendCountry }) => {
   const [weatherData, setWeatherData] = useState(null)
   const [error, setError] = useState(null)
 
-  console.log(sendCountry)
-
    const weatherWeek = async function fetchData () {
     try {
       const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=c5d292e922b44584803144339231309&q=${sendCountry}&days=6&aqi=yes&alerts=no`)
@@ -17,7 +15,6 @@ export const Today = ({ sendSearch, sendCountry }) => {
         throw new Error('Network response was not ok')
       }
       const data = await response.json()
-      console.log(data)
       return data
     } catch (error) {
       console.error('Error:', error)
@@ -97,7 +94,6 @@ export const Today = ({ sendSearch, sendCountry }) => {
       default:
         console.log('Opción no válida')
     }
-    console.log(condition)
   }
 
   const handleClick = () => {

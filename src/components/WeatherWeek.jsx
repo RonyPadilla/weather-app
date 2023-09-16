@@ -113,7 +113,6 @@ export const WeatherWeek = ({ sendCountry }) => {
       default:
         console.log('Opción no válida')
     }
-    console.log(condition)
   }
 
   const handleDate = (epochValue) => {
