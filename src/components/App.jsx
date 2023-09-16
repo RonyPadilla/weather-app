@@ -12,7 +12,7 @@ function App () {
     <>
       <section className='app'>
         {search ? <AddLocation sendCountry={setCountry} sendSearch={setSearch} /> : <Today sendCountry={country} sendSearch={setSearch} />}
-        <WeatherWeek sendCountry={country} />
+        {search && window.innerWidth < 768 ? null : <WeatherWeek sendCountry={country} />}
       </section>
     </>
   )

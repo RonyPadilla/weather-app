@@ -36,6 +36,7 @@ export const AddLocation = ({ sendSearch, sendCountry }) => {
 
   const handleCity = (value) => {
     sendCountry(value)
+    sendSearch(false)
   }
 
   const handleClick = () => {
@@ -65,7 +66,7 @@ export const AddLocation = ({ sendSearch, sendCountry }) => {
               />
             </div>
 
-            <button onClick={handleButtonClick} className='button-add-location'>add</button>
+            <button onClick={handleButtonClick} className='button-add-location'>Search</button>
           </div>
           <div className='div-added-cities'>
             {locationAdded.map((location) => (
